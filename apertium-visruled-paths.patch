@@ -1,0 +1,20 @@
+--- apertium-visruled-0.0.2/apertium-visruled.pro.orig	2013-08-16 23:55:52.000000000 +0200
++++ apertium-visruled-0.0.2/apertium-visruled.pro	2015-12-25 22:36:57.086304989 +0100
+@@ -55,13 +55,13 @@
+     INSTALLS += target data icon desktopfile
+ 
+     target.files = $$TARGET
+-    target.path = /usr/local/bin
++    target.path = $$BINDIR
+     data.files = res
+-    data.path = /usr/local/share/apertium-visruled
++    data.path = $$DATADIR/apertium-visruled
+     icon.files = misc/apertium-visruled.png
+-    icon.path = /usr/local/share/icons
++    icon.path = $$DATADIR/pixmaps
+     desktopfile.files = misc/apertium-visruled.desktop
+-    desktopfile.path = /usr/local/share/applications
++    desktopfile.path = $$DATADIR/applications
+     QMAKE_CXXFLAGS += -DVISRULED_DATADIR=$$data.path
+ }
+ 
